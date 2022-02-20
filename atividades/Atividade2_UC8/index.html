@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Eventos</title>
+    <script src="funcoes_eventos.js"></script>
+</head>
+<body>
+    <h1>Cadastro de Eventos</h1>
+
+    <form onsubmit="salvarEvento()">
+        <input type="date" id="evData" name=""><br>
+        <input type="text" id="evNome" name="" placeholder="Nome do evento"><br>
+        <input type="number" id="evVagas" name="" placeholder="Vagas"><br>
+        <input type="text" id="evPalestrante" name="" placeholder="Palestrante"><br>
+        <input type="submit" value="Salvar"><br>
+    </form>
+     <br>
+    Cód.Evento: <input type="number" id="codEvento" style="width: 50px"> <button onclick="excluirEvento()"> Excluir Evento</button><br>
+
+    <h1>Cadastro de Participantes</h1>
+    <form onsubmit="salvarParticipante()">
+        <input type="tex" id="ptNome" name="" placeholder="Nome do Participante"><br>
+        <input type="number" id="ptIdade" name="" placeholder="Idade e anos"><br>
+        <input type="submit" value="Salvar"><br>
+    </form>
+
+    <h1>Inscrição</h1>
+    <form onsubmit="gravarInscricao()">
+        Selecione o Evento: <select id="icEventos" name="" placeholder="Evento">
+        </select> <br>
+        Selecione o Participante: <select id="icParticipantes" name="" placeholder="Participante"></select><br>
+        <input type="submit" value="Inscrever"><br>
+    </form>
+    <script>
+        carregarListas();
+    </script>
+    <h1>Listagem por Evento/Palestrante</h1>
+   <div class="content">
+      <table border="1">
+        <thead>
+         <th class="center">EVENTO </th>
+         <th class="center"> PALESTRANTE </th>
+         <th class="center"> PARTICIPANTE </th>
+        </thead>
+        <tbody id="regListagem">
+        </tbody>
+       </table>
+    </div>
+    <script>
+     listagem();
+    </script>
+</body>
+</html>
+

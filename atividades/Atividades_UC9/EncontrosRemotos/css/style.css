@@ -162,12 +162,22 @@ header {
   background-size: cover;
 }
 
+.carousel-item img{
+  width: 1920px !important;
+  height: 610px !important;
+}
+
 .texto-sobre {
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
+.texto-sobre p{
+  text-align: justify;
+}
+
 
 .barras {
   width: 30px;
@@ -387,7 +397,7 @@ header {
 }
 
 .noticia .titulo-noticia h3{
-  font-size: 18px;
+  font-size: 14px;
   text-align: justify;
   margin-top: 15px;
   margin-left: 10px;

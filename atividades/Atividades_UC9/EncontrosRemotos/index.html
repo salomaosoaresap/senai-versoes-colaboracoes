@@ -51,18 +51,12 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="img/banner_pilotos.png" alt="Primeiro Slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/banner_lol.png" alt="Segundo Slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="img/banner_cs.png" alt="Terceiro Slide">
-      </div>
+      <!-- lista banner    -->
+    <div id="carousel-inner" class="carousel-inner">
     </div>
+     <!-- fim -->
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Anterior</span>
@@ -86,10 +80,12 @@
     <div class="conteudo-sobre container">
       <div class="row">
         <div class="texto-sobre col">
-          <h1>Teste</h1>
-
+          <h1>Gamers Club Mania</h1>
           <h2>Como participar das ligas</h2>
-          <p>Mussum Ipsum, cacilds vidis litro abertis. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Diuretics paradis num copo é motivis de denguis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Mé faiz elementum girarzis, nisi eros vermeio.</p>
+          <p>As inscrições para a Liga deste trimestre já estão com as inscrições abertas e vão até 01 de junho, mesmo dia que os grupos e as partidas serão reveladas. 
+            Os confrontos dos playoffs, entretanto, serão disputados no dia 22 e irão iniciar às 13h. A grande final está marcada para às 17h30 do mesmo dia.<br>
+            Para se inscrever, basta acessar <a href="#">este link</a> e você será redirecionado diretamente para a página do campeonato na Gamers Club Mania. Vale lembrar que é obrigatório 
+            ter a Medalha da Liga. Para obtê-la, clique <a href="#">neste link</a>.</p>
         </div>
         <div class="container-imagem col">
           <img src="img/lolcamp.png" alt="Imagem do campeão do LOL">
@@ -100,32 +96,32 @@
   <section class="secao-partidas">
     <div class="partidas container">
       <div class="games-aovivo">
-        <h2>Ao<br>Vivo</h2>
+        <h2>Ao Vivo</h2>
         <div class="partida">
           <div class="time1">
-            <p>SK</p>
-            <img src="img/Sklogo.jpg" alt="Logo time 1">
+            <!-- <p>CS</p> -->
+            <a href="#"><img src="img/counterstrike.svg" alt="Logo time 1"></a>
           </div>
-          <p>VS</p>
+          <!-- <p>LOL</p> -->
           <div class="time2">
-            <img src="img/Sklogo.jpg" alt="Logo time 2">
-            <p>Mortal</p>
+            <a href="#"><img src="img/lol.svg" alt="Logo time 2"></a>
+            <!-- <p>Mortal</p> -->
           </div>
         </div>
       </div>
       <div class="games-embreve">
         <div class="partidas">
           <div class="games-aovivo">
-            <h2>Em<br>Breve</h2>
+            <h2>Em Breve</h2>
             <div class="partida">
               <div class="time1">
-                <p>SK</p>
-                <img src="img/Sklogo.jpg" alt="Logo time 1">
+                <!-- <p>SK</p> -->
+                <a href="#"> <img src="img/valorant.svg" alt="Logo time 1"></a>
               </div>
-              <p>VS</p>
+              <!-- <p>VS</p> -->
               <div class="time2">
-                <img src="img/Sklogo.jpg" alt="Logo time 2">
-                <p>Mortal</p>
+                <a href="#"> <img src="img/wildrift.svg" alt="Logo time 2"></a>
+                <!-- <p>Mortal</p> -->
               </div>
             </div>
           </div>
@@ -142,42 +138,7 @@
 
       <aside class="header-noticias">
         <h2>Notícias</h2>
-        <div class="lista-noticias">
-       
-          <article class="card-noticia">
-            <div class="noticia">
-              <figure class="img-noticia"> 
-                <img src="img/Sklogo.jpg" alt="Logo time">
-              </figure> 
-              <div class="titulo-noticia">
-                <h3>
-                  <a href="#">Titulo e link da noticia</a>
-                </h3>
-                <div class="data-noticia">
-                  27/04/2022 às 11:30
-                </div>
-              </div>
-              
-            </div>  
-          </article>
-
-          <article class="card-noticia">
-            <div class="noticia">
-              <figure class="img-noticia"> 
-                <img src="img/Sklogo.jpg" alt="Logo time">
-              </figure> 
-              <div class="titulo-noticia">
-                <h3>
-                  <a href="#">Titulo e link da noticia</a>
-                </h3>
-                <div class="data-noticia">
-                  27/04/2022 às 11:30
-                </div>
-              </div>
-              
-            </div>  
-          </article>
-        </div>
+        <div id="lista-noticias" class="lista-noticias"></div>
       </aside>
   </section>
 

@@ -65,7 +65,7 @@
 
 header {
   background-color: #1E1C21;
-  height: 80px;
+  height: 110px;
 }
 
 .menu a {
@@ -74,6 +74,7 @@ header {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
+  
 }
 
 
@@ -580,4 +581,22 @@ border-radius: 10px;
   .posicionamento-header {
     position: relative;
   }
+}
+
+#menu-icones {
+  align-items: center;
+  padding: 0 10px;
+}
+
+#menu-icones i{
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+#menu-icones i:hover{
+  color: gold;
+  transition: .5s;
+  text-shadow:  0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow;
 }

@@ -1,0 +1,604 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+  }
+  
+  #cp_pesquisa{
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  #divBusca{
+    display: flex;
+    background-color:#2F4F4F;
+    border:solid 1px;
+    border-radius:15px;
+    width:200px;
+    margin: 5px 5px;
+    align-items: center;
+  }
+  
+  #bt_busca{
+    float:left;
+    color: white;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    margin: 2px 2px;
+  }
+  
+  
+  #txtBusca{
+    float:left;
+    color: white;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:150px;
+  }
+  
+  
+  .container-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+  
+  }
+  
+  header {
+    background-color: #1E1C21;
+    height: 110px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    
+  }
+  
+  
+  .menu a:hover {
+    text-decoration: none;
+    color: yellow;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow;
+  }
+  
+  
+  .menu {
+    width: 660px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+
+  
+  .banner {
+    background-image: url(../img/banner.png);
+    height: 600px;
+    background-repeat: none;
+    background-size: cover;
+  }
+  
+  #carrosel img {
+    display: none;
+  }
+  
+  .banner-ativo {
+    display: flex;
+  }
+  
+  .texto-banner {
+    width: 495px;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+  }
+  
+  .texto-banner h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+  }
+  
+  .texto-banner a {
+    background-color: #C31616;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .texto-banner p {
+    margin-bottom: 50px;
+  }
+  
+  .posicao-texto {
+    justify-content: flex-end;
+  }
+  
+  .secao-jogos {
+    background-color: black;
+  }
+  
+  .jogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .jogos img {
+    width: 150px;
+  }
+  
+  .secao-sobre {
+    background-image: url(../img/Fundo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .picsum-img-wrapper img{
+    width: 1920px !important;
+    height: 610px !important;
+  }
+  
+  .texto-sobre {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .texto-sobre p{
+    text-align: justify;
+  }
+  
+  
+  .barras {
+    width: 30px;
+    display: none;
+  }
+  
+  .secao-partidas {
+    background-color: black;
+    height: 90px;
+  }
+  
+  .partidas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .games-aovivo {
+    width: 300px;
+  }
+  
+  .games-embreve {
+    width: 550px;
+  }
+  
+  .games-aovivo,
+  .games-embreve {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .partidas h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+  
+  .partida {
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .partida p {
+    margin-bottom: 0;
+  }
+  
+  .time1,
+  .time2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .partida img {
+    width: 28px;
+  }
+  
+  .time1 img {
+    margin-left: 8px;
+  }
+  
+  .time2 img {
+    margin-right: 8px;
+  }
+  
+  .secao-noticias {
+    background-color: #1E1C21;
+    padding: 30px 0;
+  }
+  
+  .secao-noticias .container {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .bloco-promocoes {
+    width: 70%;
+    height: 90%;
+    color: white;
+  }
+  
+  .bloco-noticias h1 {
+    font-size: 35px;
+    /* color: yellow; */
+    text-shadow: 0.1em 0.1em 0.3em white, 0.1em 0.1em 0.3em blue;
+  }
+  
+  .content-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .cardnews {
+    width: 240px;
+    height: 360px;
+    color: #fff;
+    margin-bottom: 32px;
+    background: var(--gradient);
+    box-shadow: 0px 0px 10px green, 0px 0px 30px blue;
+    padding: 1px;
+    align-items: center;
+  }
+  
+  .cardnews img {
+    width: 95%;
+    height: 145px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+  }
+  
+  .cardnews h3 {
+    /* padding-left: 20px; */
+    height: 58px;
+    padding-top: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .cardnews p {
+    /* padding-left: 20px; */
+    height: 40px;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-top: 2px;
+    font-size: 12px;
+    text-align: justify;
+  }
+  
+  .cardnews h1 {
+    /* padding-left: 20px; */
+    padding-top: 2px;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .cardnews .bt-comprar {
+    /* background-color: #8326EF; */
+    padding: 2px 10px;
+    height: 40px;
+  }
+  
+  .bt-comprar .btn-comprar{
+   align-items: center;
+   border-radius: 15px;
+   background-color: green;
+   text-align: center;
+   font-size: 15px;
+   color: white;
+   padding: auto;
+   width: 100%;
+   height: 100%;
+   border: 1px white;
+   cursor: pointer;
+  
+  } 
+  
+  .bt-comprar .btn-comprar:hover{
+    background-color: yellow;
+    color: #1E1C21;
+    font-weight: bold;
+    box-shadow: 0px 0px 15px white;
+    }
+  
+  
+  .header-noticias {
+    width: 25%;
+    align-items: flex-start;
+  }
+  .header-noticias h2 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 25px;
+  }
+  
+  .next-games-bg {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em 0;
+    background: var(--gradient);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0), 0px 0px 30px rgb(0, 0, 0);
+  }
+  
+  .lista-noticias {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2em 0;
+    background: var(--gradient);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0), 0px 0px 30px rgb(0, 0, 0);
+  }
+  .card-noticias {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .img-noticia img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 2px 2px;
+  }
+  
+  .noticia .titulo-noticia h3{
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+  .noticia .titulo-noticia a{
+    color: #fff;
+  }
+  
+  .noticia {
+   display: flex;
+   align-items: initial;
+  }
+  
+  .noticia .data-noticia{
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 12px;
+    color: rgb(143, 138, 138);
+  }
+  
+  
+  .next-games-match {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .teams {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .next-games-match img {
+    max-width: 40px;
+  }
+  
+  .next-games-match p {
+    max-width: 16px;
+  }
+  
+  .next-games-match div {
+    display: flex;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: black;
+  }
+  
+  .rodape {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .links {
+    color: white;
+  }
+  
+  .links h2 {
+    font-size: 24px;
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .links a:hover {
+    text-decoration: none;
+    color: yellow;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow;}
+  
+  
+  .links-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+  }
+  
+  .logo-rodape {
+    width: 300px;
+  }
+  
+  .sociais h2 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .sociais form {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  
+  .sociais input[type="email"]::placeholder {
+    color: #B8B3b3;
+    font-weight: bold;
+  }
+  
+  .botao-cadastrar {
+    width: 156px;
+    color: white;
+    background-color: #8326EF;
+    justify-content: space-between;
+    margin-top: 0.8em;
+    border-radius: 10px;
+  }
+  
+  #campo-email {
+  border-radius: 10px;
+  }
+  
+  .cardnews {
+   border-radius: 0 0 15px 15px; 
+  }
+  
+  .siga-nos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8em;
+  }
+  
+  
+  
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .container-grid {
+      width: 90%;
+    }
+  
+    .menu a {
+      font-size: 16px;
+    }
+  
+    .logo {
+      width: 200px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+      color: blue;
+    }
+  
+    .barras {
+      display: inline-block;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 200px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      right: 60;
+      background-color: black;
+    }
+  
+    .menu a {
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .menu-ativo {
+      display: flex;
+    }
+  
+    .posicionamento-header {
+      position: relative;
+    }
+  }
+  
+  #menu-icones {
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  #menu-icones i{
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  #menu-icones i:hover{
+    color: gold;
+    transition: .5s;
+    text-shadow:  0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow, 0.2em 0.2em 0.3em yellow;
+  }
+  

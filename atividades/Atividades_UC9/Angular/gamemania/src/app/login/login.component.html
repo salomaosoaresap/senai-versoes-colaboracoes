@@ -1,0 +1,29 @@
+<body>
+   <div id="login-container">
+    <h1>Login</h1>
+    <form action="">
+       <label for="email">E-mail</label>
+       <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off">
+       <label for="password">Senha</label>
+       <input type="password" name="password" id="password" placeholder="Digite a senha">
+       <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+       <input type="submit" value="Login">
+       <input routerLink="/" id="btn-voltar" type="submit" value="Voltar">
+    </form>
+    <div id="social-container">
+      <p>Ou entre pelas redes sociais</p>
+      <fa-icon id="icon-face" [icon]="iconfacebook" size="2x"></fa-icon>
+      <fa-icon id="icon-insta" [icon]="iconInstagram" size="2x"></fa-icon>
+      <fa-icon id="icon-link" [icon]="iconLinkedin" size="2x"></fa-icon>
+
+      <!-- <i class="bi bi-facebook"></i>
+      <i class="fa-brands fa-facebook-f"></i>    
+      <i class="fa-brands fa-linkedin-in"></i> -->
+
+    </div>
+    <div id="register-container">
+      <p>Ainda não tem uma conta?</p>
+      <a href="#">Registrar</a>  
+    </div>
+  </div>
+</body>

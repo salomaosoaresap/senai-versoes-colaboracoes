@@ -1,0 +1,207 @@
+<body>
+    <header>
+      <!-- <div class="container-grid posicionamento-header"> -->
+      <div class="container">
+        <a href="">
+          <img class="logo" src="assets/logoGM.png" alt="">
+        </a>
+        <!-- <input type="text" id="cp_pesquisa"> -->
+        <div id="divBusca">
+          <input type="text" id="txtBusca" placeholder="Buscar..."/>
+          <button id="bt_busca" type="submit"><img src="assets/lupa.png" id="btnBusca" alt="Buscar"/></button>
+        </div>
+        <a href="#" id="barras">
+          <img class="barras" src="assets/bars.svg" alt="">
+        </a>
+        <div id="menu-icones">
+          <a routerLink="/login" routerLinkActive="active"><i><fa-icon [icon]="iconlogin"></fa-icon> </i> </a>
+        </div>
+      </div>
+      <div class="container">
+         <nav id="menu" class="menu">
+          <a href="">Home</a>
+          <a href="">Computadores</a>
+          <a href="">Promoções</a>
+          <a href="">Games</a>
+          <a href="">Forum</a>
+          <a href="">Contato</a>
+        </nav>
+      </div>
+  
+    </header>
+  
+  
+    <ngb-carousel *ngIf="listaCarousel">
+      <ng-template ngbSlide *ngFor="let lista of listaCarousel">
+        <div class="picsum-img-wrapper">
+          <img [src]="lista.imagem" alt="{{lista.titulo}}">
+        </div>
+        <div class="carousel-caption">
+          <h3>{{lista.titulo}}</h3>
+          <p>{{lista.descricao}}</p>
+        </div>
+      </ng-template>  
+    </ngb-carousel>
+   
+    
+  
+  
+  
+    <section class="secao-jogos">
+      <div class="jogos container">
+        <a href=""><img src="assets/f1.png" alt="Logo da Formula 1"></a>
+        <a href=""><img src="assets/lol.png" alt="Logo do League of Legends"></a>
+        <a href=""><img src="assets/cs.png" alt="Logo do Counter Strike"></a>
+        <a href=""><img src="assets/vava.png" alt="Logo do Valorant"></a>
+        <a href=""><img src="assets/fifa.png" alt="Logo do Fifa"></a>
+      </div>
+    </section>
+  
+    <section class="secao-sobre">
+      <div class="conteudo-sobre container">
+        <div class="row">
+          <div class="texto-sobre col">
+            <h1>Gamers Club Mania</h1>
+            <h2>Como participar das ligas</h2>
+            <p>As inscrições para a Liga deste trimestre já estão com as inscrições abertas e vão até 01 de junho, mesmo dia que os grupos e as partidas serão reveladas. 
+              Os confrontos dos playoffs, entretanto, serão disputados no dia 22 e irão iniciar às 13h. A grande final está marcada para às 17h30 do mesmo dia.<br>
+              Para se inscrever, basta acessar <a href="#">este link</a> e você será redirecionado diretamente para a página do campeonato na Gamers Club Mania. Vale lembrar que é obrigatório 
+              ter a Medalha da Liga. Para obtê-la, clique <a href="#">neste link</a>.</p>
+          </div>
+          <div class="container-imagem col">
+            <img src="assets/lolcamp.png" alt="Imagem do campeão do LOL">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="secao-partidas">
+      <div class="partidas container">
+        <div class="games-aovivo">
+          <h2>Ao Vivo</h2>
+          <div class="partida">
+            <div class="time1">
+              <!-- <p>CS</p> -->
+              <a href="#"><img src="assets/counterstrike.svg" alt="Logo time 1"></a>
+            </div>
+            <!-- <p>LOL</p> -->
+            <div class="time2">
+              <a href="#"><img src="assets/lol.svg" alt="Logo time 2"></a>
+              <!-- <p>Mortal</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="games-embreve">
+          <div class="partidas">
+            <div class="games-aovivo">
+              <h2>Em Breve</h2>
+              <div class="partida">
+                <div class="time1">
+                  <!-- <p>SK</p> -->
+                  <a href="#"> <img src="assets/valorant.svg" alt="Logo time 1"></a>
+                </div>
+                <!-- <p>VS</p> -->
+                <div class="time2">
+                  <a href="#"> <img src="assets/wildrift.svg" alt="Logo time 2"></a>
+                  <!-- <p>Mortal</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+  
+    <section class="secao-noticias">
+      <div class="container">
+       
+        <div class="bloco-promocoes">
+          <h1>Promoções</h1>
+          <div id="espaco-promocoes" class="content-news">
+            <div class="cardnews" *ngFor="let promocao of listaPromocao">
+              <div>
+               <img [src]="promocao.imagem" alt="{{promocao.desc}}"> <br> 
+              </div>
+              <div>
+               <h3>{{promocao.titulo}}</h3> 
+              </div>
+              <div>
+               <p>{{promocao.descricao}}</p> 
+              </div>
+              <div>
+               <h1>{{promocao.valor}}</h1>
+              </div>
+              <div class="bt-comprar"> 
+              <button type="button" class="btn-comprar">COMPRAR</button>
+              </div>
+             </div >          
+          
+          
+          </div>
+        </div>
+  
+        <aside class="header-noticias" >
+          <h2>Notícias</h2>
+          <div id="lista-noticias" class="lista-noticias">
+            <article class="card-noticia" *ngFor="let noticia of listaNoticias">
+              <div class="noticia">
+                <figure class="img-noticia"> 
+                  <img [src]="noticia.imagem" alt="{{noticia.descricao}}">
+                </figure> 
+                <div class="titulo-noticia">
+                  <h3>
+                    <a href="{{noticia.link}}">{{noticia.descricao}}</a>
+                  </h3>
+                  <div class="data-noticia">
+                    {{noticia.data}}
+                  </div>
+                </div>
+              </div>  
+            </article>
+          </div>
+        </aside>
+      </div>  
+    </section>
+  
+    <footer>
+      <div class="container rodape">
+        <div class="links-footer">
+          <div class="links">
+            <h2>Páginas</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Computadores</a></li>
+              <li><a href="#">Promoções</a></li>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Login/Cadastro</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Links Uteis</h2>
+            <ul>
+              <li><a href="#">Regras de utilização</a></li>
+              <li><a href="#">Suporte</a></li>
+              <li><a href="#">Central de Ajuda</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="logo-rodape">
+          <img src="assets/logoGM.png" alt="Logo E-players">
+        </div>
+        <div class="sociais">
+          <h2>Receba as novidades! Cadastre seu email!</h2>
+          <form action="">
+            <input id="campo-email" type="email" placeholder="E-mail" required>
+            <button onclick="enviarEmail()" class="botao-cadastrar">Cadastrar</button>
+          </form>
+          <div class="siga-nos">
+            <h2>Siga-nos em:</h2>
+            <li><a href="#"><img src="assets/insta.png" alt="Logo do insta"></a></li>
+            <li><a href="#"><img src="assets/face.png" alt="Logo do face"></a></li>
+            <li><a href="#"><img src="assets/youtube.png" alt="Logo do youtube"></a></li>
+          </div>
+        </div>
+      </div>
+    </footer>  
+  
+  </body>

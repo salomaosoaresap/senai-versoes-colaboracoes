@@ -3,7 +3,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Carousel } from '../models/carousel';
 import { Noticia } from '../models/noticia';
 import { Promocao } from '../models/promocao'
-import { NoticiasService } from '../services/noticias.service';
+import { VariosService } from '../services/varios.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ import { NoticiasService } from '../services/noticias.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private noticiasService: NoticiasService) { }
+  constructor(private servicos: VariosService) { }
 
   ngOnInit(): void {
     this.carregarNoticias();
@@ -21,20 +21,20 @@ export class HomeComponent implements OnInit {
   }
 
   carregarNoticias(){
-    this.noticiasService.getNoticias().subscribe( (noticiasRecebidas: Noticia[]) => {
+    this.servicos.getNoticias().subscribe( (noticiasRecebidas: Noticia[]) => {
       this.listaNoticias = noticiasRecebidas;
      // console.log(this.listaNoticias);
     }) 
   }
   carregarPromocao(){
-    this.noticiasService.getPromocao().subscribe( (Promocoes: Promocao[]) => {
+    this.servicos.getPromocao().subscribe( (Promocoes: Promocao[]) => {
       this.listaPromocao = Promocoes;
      // console.log(this.listaPromocao);
     }) 
   }
 
   carregarCarousel(){
-    this.noticiasService.getCarousel().subscribe( (Carousels: Carousel[]) => {
+    this.servicos.getCarousel().subscribe( (Carousels: Carousel[]) => {
       this.listaCarousel = Carousels;
     //  console.log(this.listaCarousel);
     }) 

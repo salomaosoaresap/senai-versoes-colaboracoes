@@ -129,16 +129,18 @@
       "valor": "R$ 1.500,00"
     }
   ],
-  "users":[
+  "users": [
     {
-        "id":1,
-        "email": "salomao@email.com",
-        "senha": "123"
+      "email": "salomao@email.com",
+      "password": "$2a$10$JkF69LUr7CWXAaMHgxaQNO98n9eqkdGlFLU69y3C7ShLOADZC4tpm",
+      "nome": "Salomão Soares",
+      "id": 1
     },
     {
-        "id":2,
-        "email": "teste@email.com",
-        "senha": "1234"
+      "email": "teste@email.com",
+      "password": "$2a$10$iIclsKFGI8O9zG1WDok6feGh0sxk1ALvMB6ctO35xAul8y1DsJ/fC",
+      "nome": "Teste",
+      "id": 2
     }
   ]
 }

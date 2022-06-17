@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { User } from '../models/user';
+import { VariosService } from '../services/varios.service';
+
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import { User } from '../models/user';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router, private servicos: VariosService
   ) { }
 
   ngOnInit(): void {
@@ -23,10 +25,15 @@ export class LoginComponent implements OnInit {
   
   dadosUser = new User("","");
   validarLogin(){
-    if(this.dadosUser.email == 'salomao@ceap.br' && this.dadosUser.senha == '123'){
-      // alert('Senha ok!');
+   
+    this.servicos.login(this.dadosUser).subscribe((response) => {
       this.router.navigate(['']);
-    }else{ alert('Email/Senha inválidos!');} 
+    }, (respostaErro) => {
+      alert(respostaErro.error);
+    }
+    
+    );
+  
   }
 
 }

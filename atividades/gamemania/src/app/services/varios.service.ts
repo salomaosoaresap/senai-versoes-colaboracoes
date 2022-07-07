@@ -10,6 +10,7 @@ import { User } from '../models/user';
 })
 export class VariosService {
 
+  nomeusuario = "Não Logado";
   url = "http://localhost:3000"  
   constructor(private httpClient:HttpClient) { }
 
@@ -30,6 +31,12 @@ export class VariosService {
     })
   }  
 
+  cadusu(user: User): Observable<any>{
+    return this.httpClient.post(this.url+'/register',JSON.stringify(user),{
+      headers: new HttpHeaders({'Content-Type': 'application/json'}),
+      observe: "response"
+    })
+  }  
 
   
 

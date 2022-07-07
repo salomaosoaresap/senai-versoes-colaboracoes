@@ -141,6 +141,12 @@
       "password": "$2a$10$iIclsKFGI8O9zG1WDok6feGh0sxk1ALvMB6ctO35xAul8y1DsJ/fC",
       "nome": "Teste",
       "id": 2
+    },
+    {
+      "email": "teste2@email.com",
+      "password": "$2a$10$Qc9b8nMgv/vWefBHEIc20.s2rOa5f6xwMRI6.bIK5.JqeaNsYWEr6",
+      "nome": "Teste2",
+      "id": 3
     }
   ]
 }

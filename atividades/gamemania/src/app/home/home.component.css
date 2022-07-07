@@ -28,6 +28,12 @@
     align-items: center;
   }
   
+#nome-usuario{
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+}
+
   #bt_busca{
     float:left;
     color: white;

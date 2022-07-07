@@ -1,0 +1,19 @@
+<body>
+    <div id="login-container">
+     <h1>Usuário</h1>
+     <form #userForm="ngForm" (ngSubmit)="CadastrarUsuario()">
+  
+        <label for="nome">Nome</label>
+        <input type="nome" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="off" [(ngModel)]="dadosUser.nome" >
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email" autocomplete="off" [(ngModel)]="dadosUser.email" >
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" placeholder="Digite a senha" [(ngModel)]="dadosUser.password">
+          <div id="div-botoes">
+            <div class="botao"><input type="submit" value="Cadastrar"></div> 
+            <div class="botao"><input routerLink="/" id="btn-voltar" value="Voltar"></div>
+          </div>
+     </form>
+   </div>
+ </body>

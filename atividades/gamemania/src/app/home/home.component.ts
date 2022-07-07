@@ -46,7 +46,5 @@ export class HomeComponent implements OnInit {
   listaCarousel = [] as Carousel[];
   listaNoticias = [] as Noticia[];
   listaPromocao = [] as Promocao[];
- 
-
-
+  usuario = this.servicos.nomeusuario;
 }
